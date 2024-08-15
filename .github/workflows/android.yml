@@ -42,10 +42,10 @@ jobs:
       - name: Run Unit Tests
         run: ./gradlew testDebugUnitTest
 
-      - name: Compile UI Tests
+      - name: Compile Instrumented Tests
         run: ./gradlew compileDebugAndroidTestKotlin
 
-      - name: Run UI Tests
+      - name: Run Instrumented Tests
         run: ./gradlew ftlDeviceDebugAndroidTest
 
       - name: Store Artifacts
