@@ -18,9 +18,7 @@ class ItemListScreenUITest {
     val composeTestRule = createAndroidComposeRule<MainActivity>()
     @Test
     fun clickItemNavigatesToDetail() {
-        composeTestRule.onNodeWithText("Cherry").performClick()
-
-        composeTestRule.onNodeWithText("Cherry").assertIsDisplayed()
+        composeTestRule.onNodeWithText("Cherry").performClick().assertIsDisplayed()
         composeTestRule.onNodeWithText("A small red fruit").assertIsDisplayed()
     }
 
@@ -32,6 +30,5 @@ class ItemListScreenUITest {
         // Check that the detail screen displays the correct information
         composeTestRule.onNodeWithTag("Cherry").assertIsDisplayed().performClick()
         composeTestRule.onNodeWithText("A small red fruit").assertIsDisplayed()
-
     }
 }

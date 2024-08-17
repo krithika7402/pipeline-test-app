@@ -16,12 +16,6 @@ fun PipelineDemoApp() {
         selectedItem = null
     }
 
-    val sampleItems = listOf(
-        Item(1, "Apple", "A red fruit"),
-        Item(2, "Banana", "A yellow fruit"),
-        Item(3, "Cherry", "A small red fruit")
-    )
-
     Surface(color = MaterialTheme.colorScheme.background) {
         if (selectedItem == null) {
             ItemListScreen(
@@ -33,3 +27,16 @@ fun PipelineDemoApp() {
         }
     }
 }
+
+val sampleItems = listOf(
+    Item(1, "Apple", "A red fruit"),
+    Item(2, "Banana", "A yellow fruit"),
+    Item(3, "Cherry", "A small red fruit"),
+    Item(4, "Date", "A sweet brown fruit"),
+    Item(5, "Elderberry", "A small, dark purple fruit"),
+    Item(6, "Fig", "A soft fruit with a sweet taste"),
+    Item(7, "Grape", "A small, juicy fruit that comes in bunches"),
+    Item(8, "Honeydew", "A sweet green melon"),
+    Item(9, "Kiwi", "A small fruit with brown skin and green flesh"),
+    Item(10, "Lemon", "A sour yellow fruit")
+)
