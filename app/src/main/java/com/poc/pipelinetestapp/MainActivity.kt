@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.poc.pipelinetestapp.ui.theme.PipelineDemoApp
+import com.poc.pipelinetestapp.ui.PipelineDemoApp
 import com.poc.pipelinetestapp.ui.theme.PipelineTestAppTheme
 
 class MainActivity : ComponentActivity() {

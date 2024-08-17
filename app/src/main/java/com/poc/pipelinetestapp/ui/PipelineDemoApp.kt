@@ -1,4 +1,4 @@
-package com.poc.pipelinetestapp.ui.theme
+package com.poc.pipelinetestapp.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.material3.MaterialTheme
@@ -8,9 +8,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import com.poc.pipelinetestapp.ui.Item
-import com.poc.pipelinetestapp.ui.ItemDetailScreen
-import com.poc.pipelinetestapp.ui.ItemListScreen
 
 @Composable
 fun PipelineDemoApp() {
