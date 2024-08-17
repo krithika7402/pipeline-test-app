@@ -26,7 +26,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import com.poc.pipelinetestapp.ui.ItemScreenHelper.filterItems
 
 data class Item(val id: Int, val name: String, val description: String)
 
@@ -69,8 +68,7 @@ fun ItemRow(item: Item, onItemClick: (Item) -> Unit) {
             .fillMaxWidth()
             .clickable { onItemClick(item) }
             .padding(8.dp)
-            .testTag(item.name)
-        ,
+            .testTag(item.name),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Text(text = item.name, style = MaterialTheme.typography.bodyMedium)
@@ -93,11 +91,9 @@ fun ItemDetailScreen(item: Item) {
     }
 }
 
-object ItemScreenHelper {
-    fun filterItems(searchText: String, items: List<Item>): List<Item> {
-        val filteredItems = items.filter {
-            it.name.contains(searchText, ignoreCase = true)
-        }
-        return filteredItems
+fun filterItems(searchText: String, items: List<Item>): List<Item> {
+    val filteredItems = items.filter {
+        it.name.contains(searchText, ignoreCase = true)
     }
+    return filteredItems
 }
